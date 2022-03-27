@@ -1,0 +1,2 @@
+# School_Virus_Register_AliPay
+江西省高校支付宝疫情打卡
