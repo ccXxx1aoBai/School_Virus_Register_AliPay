@@ -23,11 +23,11 @@ public class T {
                 0, "江西省", "XX市", "XX区/县", "街道");
         String position = self.province + self.city + self.district + self.street;
         JSONObject js = addJson(self, position);
-        String url = "https://fxgl.jx.edu.cn/" + self.school + "/studentQd/studentIsQd";
+        String url = "https://fxgl.jx.edu.cn/" + self.school + "/studentQd/studentIsQd";        //是否签到判断
         HttpGet httpGet = new HttpGet("https://fxgl.jx.edu.cn/" + self.school
-                + "/public/homeQd?loginName=" + self.sno + "&loginType=0");
+                + "/public/homeQd?loginName=" + self.sno + "&loginType=0");                     //必要勿删
         HttpPost httpPost = new HttpPost(url);
-        HttpPost qd = new HttpPost("https://fxgl.jx.edu.cn/" + self.school + "/studentQd/saveStu");
+        HttpPost qd = new HttpPost("https://fxgl.jx.edu.cn/" + self.school + "/studentQd/saveStu"); //打卡请求
         StringEntity s = new StringEntity(js.toJSONString(), "utf-8");
         qd.setEntity(s);
         try {
